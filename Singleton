@@ -1,0 +1,33 @@
+public class SingleTone
+{
+	private static volatile singleton instance;
+
+    private String data;
+
+    private Singleton (String data) {
+
+    this.data data;}
+
+    public static singleton getInstance(String data){
+
+    Singleton result = instance;
+
+      if(result == null){
+
+        synchronized(singleton.class){
+
+        result = instance;
+
+        if(result == null){
+
+           instance result = new singleton(data);
+        }
+            
+        }
+        return result;
+          
+      }
+        
+    }
+    
+}
