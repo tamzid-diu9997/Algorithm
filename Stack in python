@@ -1,0 +1,34 @@
+class Stack:
+    def __init__(self):
+        self.stack=[]
+
+    def push(self,x):
+        self.stack.append(x)
+    def pop(self):
+        if self.empty():
+            return "Stack is Empty"
+        return self.stack.pop()
+    def peak(self):
+        if self.empty():
+            return "Stack is Empty"
+        return self.stack[-1]
+    def size(self):
+        return len(self.stack)
+    def empty(self):
+        return len(self.stack)==0
+
+
+myStack = Stack()
+
+myStack.push('A')
+myStack.push('B')
+myStack.push('C')
+
+print("Stack: ", myStack.stack)
+print("Pop: ", myStack.pop())
+print("Stack after Pop: ", myStack.stack)
+print("Peek: ", myStack.peak())
+print("isEmpty: ", myStack.empty())
+print("Size: ", myStack.size())
+
+print(myStack.empty())
